@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            background-color: brown;
+            display: none;
+        }
+        #div1{
+            background-color: brown;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <h1>Heading</h1>
+        <p>Paragraph</p>
+    </div>
+        <br>
+       <input type="button" value="fade In" id="btn">
+    
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+      <script>
+        $(function(){
+           const $div = $(".div1")
+
+           $("#btn").on("click", function(){
+              $div.stop(true,true).fadeIn(2200)
+           });
+        });
+      </script>
+
+      <div id="div2">
+        <h1>Heading</h1>
+        <p>Paragraph</p>
+    </div>
+
+       <input type="button" value="fade Out" id="btn2">
+
+      <script>
+        $(function(){
+           const $div = $("#div2")
+
+           $("#btn2").on("click", function(){
+              $div.stop(true,true).fadeOut(2200)
+           });
+        });
+      </script>
+
+            <div id="div2">
+        <h1>Heading</h1>
+        <p>Paragraph</p>
+    </div>
+
+
+       <input type="button" value="toggle" id="btn2">
+
+       <script>
+        $(function(){
+           const $div = $("#div2")
+
+           $("#btn2").on("click", function(){
+              $div.stop(true,true).toggle(2200)
+           });
+        });
+      </script>
+
+</body>
+</html>
